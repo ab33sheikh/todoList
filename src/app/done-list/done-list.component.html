@@ -1,0 +1,7 @@
+<ul>
+    <li *ngFor="let d of view;let i=index"[attr.data.index]="i">
+        {{d}}
+        {{i}}
+        <input type="button" value="remove" (click)="onRemoveDone(i)">
+    </li>
+</ul>
