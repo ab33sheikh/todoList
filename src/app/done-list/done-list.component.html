@@ -1,7 +1,13 @@
-<ul>
-    <li *ngFor="let d of view;let i=index"[attr.data.index]="i">
-        {{d}}
-        {{i}}
-        <input type="button" value="remove" (click)="onRemoveDone(i)">
-    </li>
-</ul>
+<div class="card">
+      <div class="card-header">done lists</div>  
+        <div>
+                <ul>
+                        <li *ngFor="let d of view;let i=index"[attr.data.index]="i">
+                            {{d}}
+                            {{i}}
+                            <input type="button" class="btn bg-dark text-white" style="border-radius:40px" value="remove" (click)="onRemoveDone(i)">
+                        </li>
+                    </ul>
+        </div>
+        
+</div>

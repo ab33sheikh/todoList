@@ -1,8 +1,12 @@
-<ul>
-  <li *ngFor="let d of view;let i=index"[attr.data.index]="i">
-    {{d}}
-    {{i}}
-    <input type="button" value="done" (click)="onDone(i)">
-    <input type="button" value="remove" (click)="onRemove(i)">
-  </li>
-</ul>
+
+<div class="card">
+ <div class="card-header">todo list</div>
+    <ul>
+        <li *ngFor="let d of view;let i=index"[attr.data.index]="i">
+          {{d}}
+          {{i}}
+          <input type="button" class="btn bg-light" style="border-radius:40px;" value="done" (click)="onDone(i)">
+          <input type="button" class="btn bg-dark text-white" style="border-radius:40px;margin-left: 10px;" value="remove" (click)="onRemove(i)">
+        </li>
+      </ul>
+</div>
